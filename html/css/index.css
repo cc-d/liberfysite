@@ -1,8 +1,57 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
 }
 
+body {
+    font-family: Arial, sans-serif;
+    /* make sure it looks good in the dark by using dakr theme */
+    /* use dark color for the background */
+    background-color: #212121;
+    color: #F5F5F5;
+}
 
-.container {
+#projects {
+    display: flex;
+    flex-wrap: wrap;
 
+}
+
+.project {
+    background-color: #424242;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    max-width: calc(min(50vw, 300px));
+}
+
+.project > * {
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+a {
+    color: #2196F3;
+}
+
+a:hover {
+    color: #90CAF9;
+}
+
+a:visited {
+    color: #7E57C2;
+}
+
+#content {
+    padding: 1rem;
+    margin: 1rem;
+
+    background-color: #212121;
 }
