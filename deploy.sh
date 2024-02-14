@@ -5,6 +5,18 @@
 # Meant to be used with cron
 #
 
+if [ ! -z "$1" ]; then
+    if [ "$1" = "force" ]; then
+        # Force deployment
+        echo "Forcing deployment..."
+    else
+        # Unrecognized option
+        echo "Unrecognized option: $1"
+        exit 1
+    fi
+fi
+
+
 REPO_DIR="$HOME/liberfysite"
 REMOTE_REPO_URL="https://github.com/cc-d/liberfysite.git"
 
@@ -20,7 +32,7 @@ LOCAL=$(git rev-parse @)
 REMOTE=$(git rev-parse @{u})
 echo "Local: $LOCAL" "Remote: $REMOTE"
 
-if [ "$LOCAL" != "$REMOTE" ]; then
+if [ "$LOCAL" != "$REMOTE" ] || [ "$1" = "force" ]; then
     # Pull changes from the remote repository
     echo "Pulling changes from the remote repository..."
     git pull
