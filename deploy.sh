@@ -16,7 +16,6 @@ if [ ! -z "$1" ]; then
     fi
 fi
 
-
 REPO_DIR="$HOME/liberfysite"
 REMOTE_REPO_URL="https://github.com/cc-d/liberfysite.git"
 
