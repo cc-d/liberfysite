@@ -39,7 +39,7 @@ if [ "$LOCAL" != "$REMOTE" ] || [ "$1" = "force" ]; then
 
     echo "Copying files to /var/www/html..."
     mkdir -p /var/www/html
-    cp -r $REPO_DIR/* /var/www/html/
+    cp -r $REPO_DIR/html/* /var/www/html
 fi
 
 
