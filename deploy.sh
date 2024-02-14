@@ -42,6 +42,3 @@ if [ "$LOCAL" != "$REMOTE" ] || [ "$1" = "force" ]; then
     cp -r $REPO_DIR/html/* /var/www/html
 fi
 
-
-
-
