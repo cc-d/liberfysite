@@ -8,6 +8,10 @@
       content="Website and status tracker for all liberfy.ai services/projects"
     />
     <meta name="author" content="Cary Carter" />
+
+    <!-- Remove before production -->
+    <meta http-equiv="refresh" content="100" />
+
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <link
       rel="apple-touch-icon"
@@ -34,14 +38,16 @@
 
   <body>
     <div id="content">
+      <div id="header">
+        <img src="img/liberfy.png" alt="liberfy.ai logo" />
+        <h1>liberfy.ai</h1>
+      </div>
       <div id="projects-container">
-          <h1>Projects</h1>
         <div id="projects">
             <div class="project">
                 <h1>liberfy.ai</h1>
                 <p>
                     Website and status tracker for all liberfy.ai services/projects.
-                    Coming soon.
                 </p>
                 <a href="https://github.com/cc-d/liberfysite">GitHub</a>
                 <a href="https://liberfy.ai">Website</a>
@@ -49,7 +55,7 @@
             <div class="project">
                 <h1>open2fa</h1>
                 <p>
-                    Description for open2fa.
+                    TOTP 2FA client and server, with secure remote 2FA code generation and sync/restore capabilities.
                 </p>
                 <a href="https://github.com/cc-d/open2fa">GitHub (client)</a>
                 <a href="https://github.com/cc-d/open2fa-server">GitHub (server)</a>
