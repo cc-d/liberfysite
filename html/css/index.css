@@ -15,14 +15,13 @@ body {
 #projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 1rem;
 }
 
 .project {
-  flex: 1 0 calc(50% - 1rem); /* Fill half the width minus margin */
+
   border-radius: 8px;
-  padding: 1rem;
 
   background-color: #424242;
   display: flex;
@@ -31,20 +30,31 @@ body {
   border-radius: 8px;
   padding: 1rem;
   margin: 0.5rem;
+  min-width: calc(50vw - 2rem);
 
-  max-width: calc(max((50vw - 2rem), 300px));
+  word-wrap: break-all;
+
+  max-width: calc(50vw - 2rem);
 }
+
+@media (max-width: 400px) {
+  .project {
+    min-width: calc(100vw - 2rem);
+  }
+  #projects {
+    justify-content: center;
+  }
+}
+
 
 .project > * {
   margin-bottom: 0.25rem;
   margin-top: 0.25rem;
-  min-width: 150px;
-  width: fit-content;
   display: flex;
   flex-direction: row;
 
-  word-wrap: break-word;
 
+word-wrap: break-all;
   width: 100%;
   flex-wrap: wrap;
   align-content: center;
