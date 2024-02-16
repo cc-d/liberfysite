@@ -40,8 +40,5 @@ if [ "$LOCAL" != "$REMOTE" ] || [ "$1" = "force" ]; then
     mkdir -p /var/www/html
     ./cachebust.sh
     cp -r $REPO_DIR/html/* /var/www/html
-
-    echo "Updating crontab..."
-    crontab "$REPO_DIR/crontab"
 fi
 
