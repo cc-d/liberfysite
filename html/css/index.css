@@ -107,5 +107,14 @@ a:hover {
   font-family: monospace;
   font-weight: bold;
   font-size: 0.8rem;
-  margin-bottom: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+
+  justify-content: flex-end;
+}
+
+.project-info {
+  min-height: 110px;
 }

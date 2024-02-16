@@ -21,7 +21,9 @@ SITE_URLS = (
 class Site:
     url: str
     logfile: str
+    online: bool
     lines: list[str]
+    last_status: str
 
     def __init__(self, url: str):
         _up = urlparse(url)
@@ -45,11 +47,12 @@ class Site:
             r = requests.get(self.url)
             end = int((time() - start) * 1000)
             _logmsg = f'{r.status_code} {end}ms'
-
+            self.last_status = r.status_code
         except requests.exceptions.RequestException as e:
             print('Error:', e)
             end = int((time() - start))
             _logmsg = f'-1 {end}ms'
+            self.last_status = 'error'
 
         _logmsg = f'{time()} {_logmsg}'
 
@@ -74,6 +77,8 @@ class Site:
                 latencies.append(int(l[2][:-2]))
 
         _avgs['avg'] = round(sum(latencies) / len(self.lines), 2)
+
+        _avgs['last_status'] = self.last_status
         return _avgs
 
 

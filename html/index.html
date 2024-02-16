@@ -48,51 +48,64 @@
       <div id="projects-container">
         <div id="projects">
           <div class="project">
-            <h1>liberfy.ai</h1>
+            <div class="project-info">
+              <h1>liberfy.ai</h1>
+              <p>
+                Website and status tracker for all liberfy.ai services/projects.
+              </p>
+              <a href="https://github.com/cc-d/liberfysite">GitHub</a>
+              <a href="https://liberfy.ai">Website</a>
+            </div>
             <div class="site-stats" id="stats-liberfy.ai"></div>
-            <p>
-              Website and status tracker for all liberfy.ai services/projects.
-            </p>
-            <a href="https://github.com/cc-d/liberfysite">GitHub</a>
-            <a href="https://liberfy.ai">Website</a>
           </div>
           <div class="project">
-            <h1>open2fa</h1>
+            <div class="project-info">
+              <h1>open2fa</h1>
+
+              <p>
+                TOTP 2FA client and server, with secure remote 2FA code
+                generation and sync/restore capabilities.
+              </p>
+              <a href="https://github.com/cc-d/open2fa">GitHub (client)</a>
+              <a href="https://github.com/cc-d/open2fa-server"
+                >GitHub (server)</a
+              >
+              <a href="https://open2fa.liberfy.ai">Website</a>
+            </div>
             <div class="site-stats" id="stats-open2fa.liberfy.ai"></div>
-            <p>
-              TOTP 2FA client and server, with secure remote 2FA code generation
-              and sync/restore capabilities.
-            </p>
-            <a href="https://github.com/cc-d/open2fa">GitHub (client)</a>
-            <a href="https://github.com/cc-d/open2fa-server">GitHub (server)</a>
-            <a href="https://open2fa.liberfy.ai">Website</a>
           </div>
           <div class="project">
-            <h1>liberlife</h1>
+            <div class="project-info">
+              <h1>liberlife</h1>
+              <p>
+                Helps to track life responsibilities and goals, has a very nice
+                frontend ui
+              </p>
+              <a href="https://github.com/cc-d/liberlife">GitHub</a>
+              <a href="https://life.liberfy.ai">Website</a>
+              <a href="https://life.liberfy.ai/demo">Demo</a>
+            </div>
             <div class="site-stats" id="stats-life.liberfy.ai"></div>
-            <p>
-              Helps to track life responsibilities and goals, has a very nice
-              frontend ui
-            </p>
-            <a href="https://github.com/cc-d/liberlife">GitHub</a>
-            <a href="https://life.liberfy.ai">Website</a>
-            <a href="https://life.liberfy.ai/demo">Demo</a>
           </div>
           <div class="project">
-            <h1>global</h1>
-            <p>
-              My global repo, containing utilities and scripts I use across all
-              work environments.
-            </p>
-            <a href="https://github.com/cc-d/global">GitHub</a>
+            <div class="project-info">
+              <h1>global</h1>
+              <p>
+                My global repo, containing utilities and scripts I use across
+                all work environments.
+              </p>
+              <a href="https://github.com/cc-d/global">GitHub</a>
+            </div>
           </div>
           <div class="project">
-            <h1>flask-simple-captcha</h1>
-            <p>
-              A simple captcha for flask utilizing already included imports that
-              does not require server side sessions
-            </p>
-            <a href="https://github.com/cc-d/flask-simple-captcha">GitHub</a>
+            <div class="project-info">
+              <h1>flask-simple-captcha</h1>
+              <p>
+                A simple captcha for flask utilizing already included imports
+                that does not require server side sessions
+              </p>
+              <a href="https://github.com/cc-d/flask-simple-captcha">GitHub</a>
+            </div>
           </div>
         </div>
       </div>
@@ -108,11 +121,15 @@
           );
           if (statElem) {
             const avgMs = data.avg.toFixed(2);
-            const avgOk = (
-              ((data.ok + data.notok) / data.ok) *
-              100
-            ).toFixed(2);
-            statElem.innerText = `Uptime: ${avgOk}% ${avgMs}ms`;
+            const avgOk = (((data.ok + data.notok) / data.ok) * 100).toFixed(2);
+            if (data?.last_status !== undefined) {
+              const lastStatus = data.last_status === 200 ? 'Online' : 'Unknown';
+              statElem.innerText = `Status: ${lastStatus}\nUptime: ${avgOk}% ${avgMs}ms`;
+            } else {
+              statElem.innerText = `Uptime: ${avgOk}% ${avgMs}ms`;
+            }
+
+
           }
         }
       });
