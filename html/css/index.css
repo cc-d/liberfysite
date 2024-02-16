@@ -47,7 +47,7 @@ body {
 }
 
 
-.project > * {
+.project > p, .project > a {
   margin-bottom: 0.25rem;
   margin-top: 0.25rem;
   display: flex;
@@ -95,4 +95,17 @@ a:hover {
   max-height: 3rem;
   max-width: 3rem;
   margin-right: 0.5rem;
+}
+
+.invis-link, .invis-link:hover {
+  text-decoration: none;
+  color: inherit;
+  max-width: fit-content;
+}
+
+.site-stats {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
 }
