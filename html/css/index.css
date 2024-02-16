@@ -47,7 +47,7 @@ body {
 }
 
 
-.project > p, .project > a {
+.project > div > p, .project > div > a {
   margin-bottom: 0.25rem;
   margin-top: 0.25rem;
   display: flex;
