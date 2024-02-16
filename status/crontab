@@ -1,2 +1,2 @@
-*/5 * * * * python3 poll.py /var/www/html/js/stats.js
+*/5 * * * * python3 /home/cary/liberfysite/status/poll.py /var/www/html/js/stats.js
 * * * * * sh /home/cary/liberfysite/deploy.sh >> /tmp/log.txt 2>&1
