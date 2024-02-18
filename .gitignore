@@ -162,4 +162,5 @@ cython_debug/
 ###### Custom ######
 .status/*.log
 html/js/stats.js
+.DS_Store
 
