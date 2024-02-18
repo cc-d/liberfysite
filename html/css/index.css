@@ -30,9 +30,9 @@ body {
   border-radius: 8px;
   padding: 1rem;
   margin: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
   min-width: calc(50vw - 2rem);
-
-  word-wrap: break-all;
 
   max-width: calc(50vw - 2rem);
 }
@@ -46,19 +46,6 @@ body {
   }
 }
 
-
-.project > div > p, .project > div > a {
-  margin-bottom: 0.25rem;
-  margin-top: 0.25rem;
-  display: flex;
-  flex-direction: row;
-
-
-word-wrap: break-all;
-  width: 100%;
-  flex-wrap: wrap;
-  align-content: center;
-}
 
 a {
   color: #2196f3;
@@ -117,4 +104,32 @@ a:hover {
 
 .project-info {
   min-height: 130px;
+}
+
+.ah1 {
+  text-decoration: none;
+  color: inherit;
+  font-size: 2em;
+}
+
+.ah1:hover {
+  cursor: pointer;
+  color: inherit;
+}
+
+.status-text, .status-text * {
+  display: inline;
+}
+
+.color-span {
+  font-weight: bold;
+}
+
+.icon-link {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.project-description {
+  margin-bottom: 0.5rem;
 }
