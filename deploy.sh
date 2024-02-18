@@ -43,5 +43,3 @@ if [ "$LOCAL" != "$REMOTE" ] || [ "$1" = "force" ]; then
     ./cachebust.sh
     cp -r $REPO_DIR/html/* /var/www/html
 fi
-
-# test
