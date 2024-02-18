@@ -133,3 +133,46 @@ a:hover {
 .project-description {
   margin-bottom: 0.5rem;
 }
+
+#about-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+#about-footer > .footer-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-link {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.footer-link:hover {
+  cursor: pointer;
+}
+
+.footer-link > * {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #f5f5f5;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-link > svg {
+  margin-right: 0.25rem;
+}
+
+.about-footer > h2 {
+  display: block;
+
+}
