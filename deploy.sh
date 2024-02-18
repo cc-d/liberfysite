@@ -38,7 +38,8 @@ if [ "$LOCAL" != "$REMOTE" ] || [ "$1" = "force" ]; then
 
     echo "Copying files to /var/www/html..."
     mkdir -p /var/www/html
-    git checkout index.html
+    git checkout html/index.html
+
     ./cachebust.sh
     cp -r $REPO_DIR/html/* /var/www/html
 fi
