@@ -17,6 +17,7 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 1rem;
+  flex-direction: row;
 }
 
 .project {
