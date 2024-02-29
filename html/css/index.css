@@ -192,6 +192,12 @@ a:hover {
   margin-top: 0.5rem;
 }
 
+.img-preview img:hover {
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px dashed #f5f5f5;
+}
+
 .img-preview a {
   display: contents;
   height: 100%;
