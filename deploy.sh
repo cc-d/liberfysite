@@ -1,9 +1,7 @@
 #!/bin/sh
 
-#
 # Simple auto-deployment script for Git repositories
 # Meant to be used with cron
-#
 
 if [ ! -z "$1" ]; then
     if [ "$1" = "force" ]; then
