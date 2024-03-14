@@ -29,8 +29,15 @@ LOCAL=$(git rev-parse @)
 REMOTE=$(git rev-parse @{u})
 echo "Local: $LOCAL" "Remote: $REMOTE"
 
+LOC_STATS_JS="$REPO_DIR/html/js/stats.js"
+REM_STATS_JS="/var/www/html/js/stats.js"
+
 if [ "$LOCAL" != "$REMOTE" ] || [ "$1" = "force" ]; then
     # Pull changes from the remote repository
+    if [ -f "$REM_STATS_JS" ]; then
+        echo "not overwriting stats.js, removing local before cp"
+        rm "$REPO_DIR/html/js/stats.js"
+    fi
     echo 'resetting index.html'
     git checkout html/index.html
     echo "Pulling changes from the remote repository..."
@@ -40,5 +47,6 @@ if [ "$LOCAL" != "$REMOTE" ] || [ "$1" = "force" ]; then
     mkdir -p /var/www/html
 
     ./cachebust.sh
+
     cp -r $REPO_DIR/html/* /var/www/html
 fi
