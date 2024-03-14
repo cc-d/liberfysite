@@ -437,7 +437,7 @@
           );
           if (statElem) {
             const avgMs = data.avg.toFixed(2);
-            const avgOk = (((data.ok + data.notok) / data.ok) * 100).toFixed(2);
+            const avgOk = (((data.ok + data.notok) / data.ok).toFixed(2));
             if (data?.last_status !== undefined) {
               const lastStatus =
                 data.last_status === 200 ? 'Online' : 'Unknown';
