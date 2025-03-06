@@ -33,9 +33,9 @@ body {
   margin: 0.5rem;
   margin-top: 0.5rem;
   padding-top: 0.5rem;
-  min-width: calc(50vw - 2rem);
+  min-width: calc(47vw);
   height: 100%;
-  max-width: calc(50vw - 2rem);
+  max-width: calc(47vw);
 }
 
 @media (max-width: 400px) {
