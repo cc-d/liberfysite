@@ -29,13 +29,14 @@ body {
   flex-direction: column;
   min-height: 200px;
   border-radius: 8px;
-  padding: 16px;
-  margin: auto;
+  padding: 12px;
+
+  margin-left: 6px;
   margin-top: 8px;
   padding-top: 8px;
-  min-width: calc(47vw);
+  min-width: calc(47vw - 8px);
   height: 100%;
-  max-width: calc(47vw);
+  max-width: calc(47vw - 8px);
 }
 
 @media (max-width: 800px) {
