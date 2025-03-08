@@ -38,13 +38,14 @@ body {
   max-width: calc(47vw);
 }
 
-
-@media (max-width: 600px) {
-	.project {
-		max-width: calc(47vw - 16px);
-		min-width: calc(47vw - 16px);
-	}
+@media (max-width: 800px) {
+  .project {
+      max-width: calc(47vw - 16px);
+      min-width: calc(47vw - 16px);
+  }
 }
+
+
 
 @media (max-width: 400px) {
   .project {
@@ -59,7 +60,7 @@ body {
 a {
   color: #2196f3;
 }
-
+ƒ
 a:hover {
   color: #90caf9;
 }
@@ -195,7 +196,7 @@ a:hover {
 
 .img-preview {
   max-width: 100%;
-  overflow: scroll;
+  overflow: auto;
   display: flex;
   flex-direction: row;
   margin-top: 8px;
