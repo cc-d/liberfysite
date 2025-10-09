@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://cc-d.me/</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://cc-d.me/site.webmanifest</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://cc-d.me/css/index.css</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://cc-d.me/resume.pdf</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://cc-d.me/html/blockhashes.txt</loc>
+    
+  </url>
+
+  <!-- image assets -->
+  <url><loc>https://cc-d.me/img/preview-liblife-lite1.png</loc>
+  <url><loc>https://cc-d.me/img/preview-logf.png</loc>
+  <url><loc>https://cc-d.me/img/preview-captcha.png</loc>
+  <url><loc>https://cc-d.me/img/preview-liblife-dark1.png</loc>
+  <url><loc>https://cc-d.me/img/preview-open2fa.png</loc>
+  <url><loc>https://cc-d.me/img/preview-liblife-dark0.png</loc>
+  <url><loc>https://cc-d.me/img/preview-open2fa-server.png</loc>
+  <url><loc>https://cc-d.me/img/liberfy.png</loc>
+  <url><loc>https://cc-d.me/img/android-chrome-192x192.png</loc>
+  <url><loc>https://cc-d.me/img/android-chrome-512x512.png</loc>
+  <url><loc>https://cc-d.me/img/apple-touch-icon.png</loc>
+  <url><loc>https://cc-d.me/img/favicon.ico</loc>
+  <url><loc>https://cc-d.me/img/favicon-16x16.png</loc>
+  <url><loc>https://cc-d.me/img/favicon-32x32.png</loc>
+
+</urlset>
+
